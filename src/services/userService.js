@@ -10,7 +10,7 @@ const getAllUser = (inputId) => {
 }
 
 const createNewUserService = (data) => {
-      console.log('check data from service: ', data)
+      // console.log('check data from service: ', data)
       return axios.post('/api/create-new-user', data)
 }
 
@@ -38,11 +38,15 @@ const getAllDoctors = () => {
       return axios.get(`/api/get-all-doctors`)
 }
 
+const saveDetailDoctorService = (data) => {
+      return axios.post('/api/save-info-doctor', data)
+}
+
 export {
       handleLoginApi, getAllUser,
       createNewUserService,
       deleteUserService, editUserService,
       getAllCodeService, getTopDoctorHomeService,
-      getAllDoctors
+      getAllDoctors, saveDetailDoctorService
 }
 
